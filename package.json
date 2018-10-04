@@ -1,0 +1,22 @@
+{
+  "name": "dbestimatebuilder",
+  "version": "1.0.0",
+  "description": "Web App to build customer estimate landing pages",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",  "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tabbplomaritas/estimateBuilder.git"
+  },
+  "author": "Tabbatha Plomaritas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tabbplomaritas/estimateBuilder/issues"
+  },
+  "homepage": "https://github.com/tabbplomaritas/estimateBuilder#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
