@@ -20,3 +20,61 @@ h1,h2,h3,h4,h5,h6 {
   font-weight: 700;
   color: #333333;
 }
+
+header {
+    width: 100%;
+    border-bottom: 1rem solid black;
+}
+
+header img {
+    width: 100%;
+    padding: 3rem;
+}
+
+form {
+    border-top: 1rem solid black;
+    border-bottom: 1rem solid black;
+    margin: 5rem auto;
+    min-height: 50rem;
+    font-size: 3rem;
+    padding: 3rem;
+    text-align: center;
+    width: 90rem;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+form input.form-control, .submit {
+    height: 4rem;
+    min-width: 25rem;
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    line-height: 2rem;
+    text-transform: uppercase;
+    border-radius: 20px;
+    background-color: white;
+    color: #333333;
+    font-weight: 300;
+}
+
+.form-inline {
+    justify-content: space-around;
+}
+
+form .submit {
+    position: absolute;
+    bottom: 2rem;
+    right: 0;
+    background-color: rgb(156, 120, 189);
+    cursor: pointer;
+}
+
+.form-row {
+    margin-bottom: 1rem;
+}
+
+.packageSelected {
+    background-color: rgb(156, 120, 189);
+}
