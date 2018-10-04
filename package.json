@@ -4,7 +4,8 @@
   "description": "Web App to build customer estimate landing pages",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",  "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,11 @@
   },
   "homepage": "https://github.com/tabbplomaritas/estimateBuilder#readme",
   "dependencies": {
-    "express": "^4.16.3"
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "pg": "^7.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4"
   }
 }
