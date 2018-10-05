@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 //these will be the routes we need to use. portal is made up.
 app.use(express.static(__dirname + "/public"));
 
-app.use("/portal", clients);
+app.use("/", clients);
 
 app.post('/endpoint', function(req, res){
 	var obj = {};

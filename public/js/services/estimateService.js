@@ -21,9 +21,11 @@ const addClient = (client) => {
 }
 
 const getClients = () => {
+  console.log("get clients in service");
+  
     return $http({
     method: "GET",
-    url: "/portal/clients"
+    url: "/clients"
   }).then((response) => {
     clients = response.data;
     console.log(clients);

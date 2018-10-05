@@ -29,9 +29,15 @@ const newClient = {
    EstimateService.addClient(client).then((response) => {
         console.log(response);
         });
-    
   }
 
+  vm.getClients = () => {
+    console.log("get clients in comp");
+    
+   EstimateService.getClients().then((response) => {
+        console.log(response);
+        });
+  }
 
   }]
 };

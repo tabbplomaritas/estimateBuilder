@@ -14,35 +14,7 @@ estimateRouter.get("/clients", (req, res) => {
   });
 });
 
-// estimateRouter.post("/clients", (req, res) => {
-//   pool.query("INSERT INTO clients (name, products, total) VALUES ($1::text)", [req.body.name]).then(() => {
-//     pool.query("UPDATE shopping_cart SET item_total = quantity*price;").then(()=>{
-//       pool.query("SELECT * FROM clients ORDER BY id").then((result) => {
-//       console.log(result.rows);
-//       res.send(result.rows);
-//     });
-//   })
-//   })
-// });
 
-// estimateRouter.get("/grandtotal", (req, res) => {
-//     pool.query("SELECT SUM(price * quantity) FROM shopping_cart;").then((result)=> {
-//       console.log(result.rows[0].sum);
-//       res.send(result.rows[0].sum);
-//   });
-//   console.log("get grand total at store");
-// });
-
-
-// estimateRouter.delete("/cart-items/", (req, res) => {
-//   console.log("clear cart on routes");  
-//   pool.query("DELETE FROM shopping_cart")
-//   .then(() => {
-//     pool.query("SELECT * FROM shopping_cart ORDER BY id").then((result) => {
-//       res.send(result.rows);
-//     });
-//   });
-// });
 
 
 module.exports = estimateRouter;
