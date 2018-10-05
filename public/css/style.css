@@ -46,7 +46,7 @@ form {
     position: relative;
 }
 
-form input.form-control, .submit {
+form input.form-control, .submit, .packages p {
     height: 4rem;
     min-width: 25rem;
     font-size: 2rem;
@@ -54,10 +54,16 @@ form input.form-control, .submit {
     line-height: 2rem;
     text-transform: uppercase;
     border-radius: 20px;
-    background-color: white;
+    /* background-color: white; */
     color: #333333;
     font-weight: 300;
+    transition: .3s all;
 }
+
+.form-control:hover {
+    box-shadow: -1px 1px 5px -1px #333333cc;
+}
+
 
 .form-inline {
     justify-content: space-around;
@@ -77,4 +83,7 @@ form .submit {
 
 .packageSelected {
     background-color: rgb(156, 120, 189);
+
 }
+
+

@@ -2,32 +2,51 @@ function saveForm(){
   let info ={
       name: $("#clientname").val(),
       total: $("#total").val(),
-      packages: $(".packageSelected")
+      packagesRaw: $(".packageSelected"),
+      packages: []
   }
 
-  const addRes = new NewRes
-  (info.name, info.phone, info.partySize, info.bookedTable);
+  for(let package of info.packagesRaw){
+    console.log(package.id); 
+    info.packages.push(`${package.id} `);
+  }
 
-  myResTracker.reservations.push(addRes);
-  console.log(`***${myResTracker.reservations[0]}`)
+  console.log(info);
 
-
-
-  $(`#${tableNumber}`).addClass("reserved").removeClass("available");
-  
-  console.log(`
-  Your new reservation details are:
-      name: ${info.name},
-      phone: ${info.phone},
-      partySize: ${info.partySize},
-      bookedTable: ${tableNumber}
-  `);
-
-  hideForm();
-  resetFormValues();
+  $(".output").append(`
+    <h2>Output</h2>
+    <p>Client Name: ${info.name}</p>
+    <p>Total Cost: ${info.total}</p>
+    <p>Packages: ${info.packages}</p>
+  `)
 
 }
 
-function resetFormValues(){
-  $("input[type=text], textarea").val("");
+class NewClient {
+  constructor(name, total, packages)
+  {
+    this.name = name;
+    this.total = total;
+    this.packages = packages;
+  }
 }
+
+
+// function resetFormValues(){
+//   $("input[type=text], textarea").val("");
+// }
+
+
+$(".packages p").on("click", function($event){
+
+  console.log($event.target);
+  let clicked = $event.target;
+  $($event.target).toggleClass("packageSelected");
+})
+
+$( "form" ).submit(function( event ) {
+  console.log("form is submitted!");
+  event.preventDefault();
+  saveForm();
+
+});
