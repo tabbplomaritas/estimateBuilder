@@ -1,0 +1,32 @@
+<section class="container">
+    <form autocomplete="off" ng-submit="$ctrl.addClient($ctrl.client)">
+    
+        <div class="form-row">
+            <div class="col-md-12">
+                <label for="clientname">Client Name</label>
+                <input type="text" class="form-control" id="clientname" autofocus placeholder="" value="" name="clientname" required ng-model="$ctrl.client.name">
+            </div>
+        </div>
+  <div class="form-row">
+      <div class="col-md-12">
+            <label for="products">Products</label>
+          <div class="form-inline products">
+                <p class="form-control" name="products"  id="brand" value="brand" ng-click="$ctrl.setProducts($event);">Brand</p>
+                <p class="form-control" name="products"  id="identity" value="identity" ng-click="$ctrl.setProducts($event);">Identity</p>
+                <p class="form-control" name="products"  id="web" value="web" ng-click="$ctrl.setProducts($event);">Web</p>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="form-row">
+      <div class="col-md-12">
+            <label for="total">Project Total</label>
+          <div class="form-inline">
+                <input class="form-control" name="total" type="number" id="total" ng-model="$ctrl.client.total">
+          </div>
+        </div>
+    </div>
+  </div>
+  <button class="btn btn-secondary btn-lg btn-block submit" type="submit">Submit form</button>
+    </form>
+</section>

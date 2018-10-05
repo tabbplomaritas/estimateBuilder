@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="App">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,41 +14,8 @@
         <img src="images/DOBETTER-Wordmark-BLACK.png" alt="do better">
     </header>
 
-<section class="container">
-    <form autocomplete="off">
-    
-        <div class="form-row">
-            <div class="col-md-12">
-                <label for="clientname">Client Name</label>
-                <input type="text" class="form-control" id="clientname" autofocus placeholder="" value="" name="clientname" required>
-                <div class="valid-feedback">
-                    Looks good!
-                </div>
-            </div>
-        </div>
-  <div class="form-row">
-      <div class="col-md-12">
-            <label for="package">Package</label>
-          <div class="form-inline packages">
-                <p class="form-control" name="package"  id="brand" value="brand">Brand</p>
-                <p class="form-control" name="package"  id="identity" value="identity">Identity</p>
-                <p class="form-control" name="package"  id="web" value="web">Web</p>
-          </div>
-        </div>
-    </div>
-  </div>
-  <div class="form-row">
-      <div class="col-md-12">
-            <label for="total">Project Total</label>
-          <div class="form-inline">
-                <input class="form-control" name="total" type="number" id="total">
-          </div>
-        </div>
-    </div>
-  </div>
-  <button class="btn btn-secondary btn-lg btn-block submit" type="submit">Submit form</button>
-    </form>
-</section>
+<ng-view></ng-view>
+
 
 <section>
     <div class="container output">
@@ -63,5 +30,14 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="js/estimate.js"></script>
+
+<script src="https://code.angularjs.org/1.6.5/angular.min.js"></script>
+<script src="https://code.angularjs.org/1.6.5/angular-route.min.js"></script>
+<script src="js/module/module.js"></script>
+<script src="js/config/config.js"></script>
+<script src="js/components/newclient-comp.js"></script>
+ 
+  <script src="js/services/estimateService.js"></script>
+  <script></script>
 </body>
 </html>

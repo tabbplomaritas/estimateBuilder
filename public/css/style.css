@@ -13,6 +13,8 @@ body {
   font-family: 'Raleway', sans-serif;
   width: 100%;
   font-size: 1.3rem;
+  background-color: white;
+  border-top: 10rem solid #1c1c1c;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -24,6 +26,7 @@ h1,h2,h3,h4,h5,h6 {
 header {
     width: 100%;
     border-bottom: 1rem solid black;
+    background-color: white;
 }
 
 header img {
@@ -44,9 +47,10 @@ form {
     justify-content: space-between;
     align-items: center;
     position: relative;
+    background-color: white;
 }
 
-form input.form-control, .submit, .packages p {
+form input.form-control, .submit, .products p {
     height: 4rem;
     min-width: 25rem;
     font-size: 2rem;
@@ -81,7 +85,7 @@ form .submit {
     margin-bottom: 1rem;
 }
 
-.packageSelected {
+.productselected {
     background-color: rgb(156, 120, 189);
 
 }
