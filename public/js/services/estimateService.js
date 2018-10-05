@@ -27,7 +27,7 @@ const getClients = () => {
     method: "GET",
     url: "/clients"
   }).then((response) => {
-    clients = response.data;
+    clients = response;
     console.log(clients);
     return clients;
   }).catch((error) => {
