@@ -12,7 +12,9 @@ const newClient = {
       products: [],
       total: ""
     };
-    // vm.client.products = [];
+
+    vm.allClients;
+
 
   vm.setProducts = ($event) => {
     console.log($event.target.id);
@@ -35,7 +37,8 @@ const newClient = {
     console.log("get clients in comp");
     
    EstimateService.getClients().then((response) => {
-        console.log(response);
+      vm.clients = response;
+        console.log(vm.clients);
         });
   }
 

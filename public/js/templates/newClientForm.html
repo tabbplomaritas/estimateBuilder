@@ -30,3 +30,17 @@
   <button class="btn btn-secondary btn-lg btn-block submit" type="submit">Submit form</button>
     </form>
 </section>
+
+<section class="allClients">
+    <h2>All Clients</h2>
+
+    <div ng-repeat="client in $ctrl.allClients">
+        <h3>{{ client.name }}</h3>
+        <p>Products:</p>
+        <ul>
+            <li ng-repeat="product in client.products"></li>
+        </ul>
+        <p>Total: {{ client.total }}</p>
+
+    </div>
+</section>
