@@ -7,21 +7,23 @@ const pg = require("pg");
 const estimateRouter = express.Router();
 
 
-// estimateRouter.get("/store", (req, res) => {
-//   pool.query("SELECT * FROM store ORDER BY id").then((response)=>{
-//     console.log(response.rows);
-//     res.send(response.rows);
-//   });
-// });
-
-estimateRouter.post("/clients", (req, res) => {
-  pool.query("INSERT INTO clients (name, products, total) VALUES ($1::text, $2::text, $3::int)", [req.body.name, req.body.products, req.body.total]).then(() => {
-      pool.query("SELECT * FROM clients ORDER BY id").then((result) => {
-      console.log(result.rows);
-      res.send(result.rows);
-  })
-  })
+estimateRouter.get("/clients", (req, res) => {
+  pool.query("SELECT * FROM clients ORDER BY id").then((response)=>{
+    console.log(response.rows);
+    res.send(response.rows);
+  });
 });
+
+// estimateRouter.post("/clients", (req, res) => {
+//   pool.query("INSERT INTO clients (name, products, total) VALUES ($1::text)", [req.body.name]).then(() => {
+//     pool.query("UPDATE shopping_cart SET item_total = quantity*price;").then(()=>{
+//       pool.query("SELECT * FROM clients ORDER BY id").then((result) => {
+//       console.log(result.rows);
+//       res.send(result.rows);
+//     });
+//   })
+//   })
+// });
 
 // estimateRouter.get("/grandtotal", (req, res) => {
 //     pool.query("SELECT SUM(price * quantity) FROM shopping_cart;").then((result)=> {

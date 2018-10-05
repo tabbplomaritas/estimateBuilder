@@ -3,6 +3,7 @@ console.log("service is a go");
 
 function EstimateService($http){
 
+let clients;
 
 const addClient = (client) => {
   // for(let product of store) {
@@ -19,8 +20,22 @@ const addClient = (client) => {
   })
 }
 
+const getClients = () => {
+    return $http({
+    method: "GET",
+    url: "/portal/clients"
+  }).then((response) => {
+    clients = response.data;
+    console.log(clients);
+    return store;
+  }).catch((error) => {
+    console.log(error);
+  })
+}
+
   return {
-    addClient
+    addClient,
+    getClients
   };
 }
 
