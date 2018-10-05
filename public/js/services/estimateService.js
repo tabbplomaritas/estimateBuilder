@@ -29,7 +29,7 @@ const getClients = () => {
   }).then((response) => {
     clients = response.data;
     console.log(clients);
-    return store;
+    return clients;
   }).catch((error) => {
     console.log(error);
   })
