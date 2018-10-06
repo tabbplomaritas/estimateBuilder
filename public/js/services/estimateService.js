@@ -21,8 +21,8 @@ const setClients = () => {
     method: "GET",
     url: "/clients"
   }).then((response) => {
-    clients = response;
-    console.log(clients.data);
+    clients = response.data;
+
     return clients
   }).catch((error) => {
     console.log(error);

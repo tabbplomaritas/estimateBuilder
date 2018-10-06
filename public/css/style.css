@@ -105,6 +105,10 @@ form .form-control, .submit, form p, form a, .lg-btn {
     text-align: center;
 }
 
+a.admin {
+    background-color: transparent;
+}
+
 form .text-normal {
     margin: 1rem;
     padding: 1rem;
@@ -166,7 +170,7 @@ form .submit {
 }
 
 .clients {
-    margin-top: 3rem;
+    /* margin-top: 3rem; */
     justify-content: space-between;
     align-items: center;
     padding: 2rem;

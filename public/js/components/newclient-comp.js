@@ -8,9 +8,9 @@ const newClient = {
   controller: ["EstimateService", function(EstimateService) {
     const vm = this;
     vm.client = {
-      name: "",
-      products: [],
-      total: ""
+      "name": "",
+      "total":0,
+      "products": ""
     };
 
     vm.allClients;
@@ -20,7 +20,7 @@ const newClient = {
     console.log($event.target.id);
     let product = $event.target.id;
     // let el = $event.target;
-    vm.client.products.push(product);
+    vm.client.products += `${product},`
     console.log(vm.client);
      angular.element($event.target).toggleClass("productselected");
   
@@ -29,7 +29,7 @@ const newClient = {
   vm.addClient = () => {
     // vm.client.name = client.name;
     console.log(vm.client.name);
-   EstimateService.addClient(vm.client.name).then((response) => {
+   EstimateService.addClient(vm.client).then((response) => {
         console.log(response);
         });
   }

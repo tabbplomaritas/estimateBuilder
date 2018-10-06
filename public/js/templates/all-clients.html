@@ -8,7 +8,7 @@
     
       
         <div class="col col-md-4">
-            <p ng-repeat="product in client.products">{{ product }}</p>
+            <p ng-repeat="product in client.products track by $index">{{ product }}</p>
         </div>
         
         <div class="col col-md-4">
