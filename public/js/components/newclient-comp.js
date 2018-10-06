@@ -26,9 +26,10 @@ const newClient = {
   
   }
 
-  vm.addClient = (client) => {
-    console.log(client);
-   EstimateService.addClient(client).then((response) => {
+  vm.addClient = () => {
+    // vm.client.name = client.name;
+    console.log(vm.client.name);
+   EstimateService.addClient(vm.client.name).then((response) => {
         console.log(response);
         });
   }

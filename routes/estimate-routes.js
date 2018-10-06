@@ -16,8 +16,6 @@ estimateRouter.get("/clients", (req, res) => {
 
 estimateRouter.post("/clients", (req, res) => {
   pool.query("INSERT INTO clients (name) VALUES ($1::text)", [req.body.name]).then(() => {
-    pool.query("SELECT * FROM clients ORDER BY id")
-  }).then((response)=>{
     console.log(response.rows);
     res.send(response.rows);
   });
