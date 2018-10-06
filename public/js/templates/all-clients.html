@@ -1,0 +1,40 @@
+<section class="">
+    <h2>All Clients</h2>
+
+ 
+    <div class="clients row" ng-repeat="client in $ctrl.clients">
+    
+          <p class="lg-btn">{{ client.name }}</p>
+    
+      
+        <div class="col col-md-4">
+            <p ng-repeat="product in client.products">{{ product }}</p>
+        </div>
+        
+        <div class="col col-md-4">
+            <p>${{ client.total }}</p>
+        </div>
+     
+
+  </div>
+
+<!-- 
+    <form action="">
+    <div class="" ng-repeat="client in $ctrl.clients">
+        <p>{{ client.name }}</p>
+        <div class="row">
+          <p>Products:</p>
+        </div>
+        <div class="row">
+            <p class="text-normal" ng-repeat="product in client.products">{{ product }}</p>
+          </div> -->
+
+<!--        
+            <li ng-repeat="product in client.products">{{ product }}</li>
+
+        <p>Total: {{ client.total }}</p> -->
+
+    </div>
+
+  </form>
+</section>

@@ -6,37 +6,36 @@ function EstimateService($http){
 let clients;
 
 const addClient = (client) => {
-  // for(let product of store) {
-  //   if(product.id === item.id){
-  //     product.added = true;
-
-  //   }
-  // }
 
   return $http({
     method: "POST",
-    url: "/portal/clients",
+    url: "/clients",
     data: client
   })
 }
 
-const getClients = () => {
-  console.log("get clients in service");
+const setClients = () => {
+  console.log("set clients in service");
   
     return $http({
     method: "GET",
     url: "/clients"
   }).then((response) => {
     clients = response;
-    console.log(clients);
-    return clients;
+    console.log(clients.data);
+    return clients
   }).catch((error) => {
     console.log(error);
   })
 }
 
+const getClients = () => {
+  return clients;
+}
+
   return {
     addClient,
+    setClients,
     getClients
   };
 }

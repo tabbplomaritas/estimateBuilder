@@ -14,69 +14,140 @@ body {
   width: 100%;
   font-size: 1.3rem;
   background-color: white;
-  border-top: 10rem solid #1c1c1c;
+  /* border-top: 10rem solid #1c1c1c; */
 }
 
 h1,h2,h3,h4,h5,h6 {
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
-  color: #333333;
+  color: #1c1c1c;
+}
+
+h2 {
+    color: white;
+    background-color: #1c1c1c;
+    height: 10rem;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 10rem;
+    /* font-weight: 300; */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+section {
+    /* padding: 3rem; */
 }
 
 header {
+    border-top: 10rem solid #1c1c1c;
+    /* border-bottom: 10rem solid #1c1c1c; */
     width: 100%;
-    border-bottom: 1rem solid black;
-    background-color: white;
+    position: relative;
+    background-color: rgb(143, 223, 53);
+    height: 40rem;
 }
 
 header img {
     width: 100%;
     padding: 3rem;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+}
+
+main {
+    /* padding: 5rem; */
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 form {
-    border-top: 1rem solid black;
-    border-bottom: 1rem solid black;
-    margin: 5rem auto;
+    /* border-top: 1rem solid black;
+    border-bottom: 1rem solid black; */
+    margin: 0 auto;
     min-height: 50rem;
-    font-size: 3rem;
-    padding: 3rem;
+    /* font-size: 3rem; */
+    padding: 1rem;
     text-align: center;
-    width: 90rem;
+    /* width: 90rem; */
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     position: relative;
-    background-color: white;
-}
-
-form input.form-control, .submit, .products p {
-    height: 4rem;
-    min-width: 25rem;
-    font-size: 2rem;
-    padding: 1rem 2rem;
-    line-height: 2rem;
-    text-transform: uppercase;
-    border-radius: 20px;
     /* background-color: white; */
-    color: #333333;
-    font-weight: 300;
-    transition: .3s all;
 }
 
-.form-control:hover {
-    box-shadow: -1px 1px 5px -1px #333333cc;
+
+form .form-control, .submit, form p, form a, .lg-btn {
+    margin: 1rem;
+    width: 30%;
+    padding: 3.375rem .75rem;
+    font-size: 1.7rem;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    color: #1c1c1c;
+    /* background-color: transparent; */
+    background-clip: padding-box;
+    border-radius: 0;
+    border: 3px solid #1c1c1c;
+    transition: .3s ease-in-out;
+    background-clip: border-box;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+
+form .text-normal {
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    color: #1c1c1c;
+    /* background-color: transparent; */
+    background-clip: padding-box;
+    border-radius: 0;
+    /* border: 3px solid #1c1c1c; */
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+}
+
+form .row {
+    justify-content: space-between;
+}
+
+.form-control:not(input):hover {
+    background-color: #1c1c1c;
+    color: white;
+}
+
+.form-control:focus {
+    color: #1c1c1c;
+    background-color: initial;
+    border-color: initial;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgb(156, 120, 189)
 }
 
 
 .form-inline {
-    justify-content: space-around;
+    justify-content: center ;
+    width: 100%;
 }
 
 form .submit {
-    position: absolute;
+    /* position: absolute;
     bottom: 2rem;
-    right: 0;
+    right: 0; */
     background-color: rgb(156, 120, 189);
     cursor: pointer;
 }
@@ -90,4 +161,29 @@ form .submit {
 
 }
 
+.green {
+    background-color: rgb(143, 223, 53);
+}
 
+.clients {
+    margin-top: 3rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    transition: .3s all;
+    cursor: pointer;
+}
+
+.clients:hover {
+    background-color: rgb(143, 223, 53);
+    color: #1c1c1c;;
+}
+
+
+
+@media (min-width: 576px){
+.form-inline .form-control {
+    width: 30%;
+}
+
+}

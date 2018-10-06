@@ -26,23 +26,13 @@ const newClient = {
   
   }
 
-  // vm.addClient = (client) => {
-  //   console.log(client);
-  //  EstimateService.addClient(client).then((response) => {
-  //       console.log(response);
-  //       });
-  // }
-
-  vm.getClients = () => {
-    console.log("get clients in comp");
-    
-   EstimateService.getClients().then((response) => {
-      vm.allClients = response;
-        console.log(vm.allClients);
+  vm.addClient = (client) => {
+    console.log(client);
+   EstimateService.addClient(client).then((response) => {
+        console.log(response);
         });
   }
 
-  vm.getClients();
 
   }]
 };
