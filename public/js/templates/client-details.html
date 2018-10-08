@@ -1,0 +1,26 @@
+<section id="clientDetails">
+  <h2>Client Details</h2>
+
+
+  <div class="clients row">
+    <p>Client Name:</p>
+    <p ng-repeat="client in $ctrl.selectedClient"></p>
+    <input type="text" ng-value="selectedClient.name">
+      <!-- <p class="lg-btn">{{ client.name }}</p> -->
+      <!-- <div class="row">
+        <p>Products:</p>
+          <p ng-repeat="product in client.products track by $index">{{ product }}</p>
+      </div>
+      
+      <div class="row">
+        <p>Client Total:</p>
+          <p>${{ client.total }}</p>
+      </div>
+      <div class="row">
+          <p>Summary:</p>
+            <p>${{ client.total }}</p>
+        </div> -->
+  </div>
+
+</section>
+

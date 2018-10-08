@@ -1,5 +1,5 @@
 "use strict";
-console.log("new client comp loading");
+
 
 const newClient = {
 
@@ -22,7 +22,7 @@ const newClient = {
     // let el = $event.target;
     vm.client.products += `${product},`
     console.log(vm.client);
-     angular.element($event.target).toggleClass("productselected");
+     angular.element($event.target).toggleClass("green");
   
   }
 

@@ -3340,6 +3340,7 @@
 .slideInRight {
   -webkit-animation-name: slideInRight;
   animation-name: slideInRight;
+  animation-fill-mode: forwards;
 }
 
 @-webkit-keyframes slideInUp {

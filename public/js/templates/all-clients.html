@@ -1,12 +1,9 @@
-<section class="">
-    <h2>All Clients</h2>
+<section class="allClients">
+    <h2>View All Clients</h2>
 
  
-    <div class="clients row" ng-repeat="client in $ctrl.clients">
-    
-          <p class="lg-btn">{{ client.name }}</p>
-    
-      
+    <div class="clients row" ng-repeat="client in $ctrl.clients" ng-click="$ctrl.setSelectedClient(client);">
+        <p class="lg-btn">{{ client.name }}</p>
         <div class="col col-md-4">
             <p ng-repeat="product in client.products track by $index">{{ product }}</p>
         </div>
@@ -14,27 +11,32 @@
         <div class="col col-md-4">
             <p>${{ client.total }}</p>
         </div>
-     
-
-  </div>
-
-<!-- 
-    <form action="">
-    <div class="" ng-repeat="client in $ctrl.clients">
-        <p>{{ client.name }}</p>
-        <div class="row">
-          <p>Products:</p>
-        </div>
-        <div class="row">
-            <p class="text-normal" ng-repeat="product in client.products">{{ product }}</p>
-          </div> -->
-
-<!--        
-            <li ng-repeat="product in client.products">{{ product }}</li>
-
-        <p>Total: {{ client.total }}</p> -->
-
     </div>
-
   </form>
 </section>
+
+<section class="clientDetails">
+        <i class="far fa-times-circle close"></i>
+        <h2>Client Details</h2>
+      
+      <form action="" class="col green">
+
+          <label>Client Name:</label>
+          <p class="form-control">{{$ctrl.selectedClient.name}}</p> 
+          <label>Summary:</label>
+          <p class="summary form-control">{{$ctrl.selectedClient.summary}}</p> 
+          <label for="products">Products:</label>
+          <div class="row">
+              <p class="form-control" ng-repeat="product in $ctrl.selectedClient.products">
+                  {{product}}
+              </p>
+          </div> 
+          <label>Deadline:</label>
+          <p class="form-control">{{$ctrl.selectedClient.deadline}}</p> 
+          <label>Total:</label>
+          <p class="form-control">{{$ctrl.selectedClient.total}}</p> 
+
+    
+    </form>
+</section>
+

@@ -8,6 +8,13 @@
                 <input type="text" class="form-control" id="clientname" autofocus placeholder="" value="" name="clientname" required ng-model="$ctrl.client.name">
             </div>
         </div>
+        <div class="form-row">
+            <div class="col col-md-12">
+                <label for="summary">Summary</label>
+                <textarea type="textarea" rows="4" class="form-control" id="summary"  name="summary" required ng-model="$ctrl.client.summary"></textarea>
+            </div>
+        </div>
+
   <div class="form-row">
       <div class="col col-md-12">
             <label for="products">Products</label>
@@ -23,11 +30,20 @@
       <div class="col col-md-12">
             <label for="total">Project Total</label>
           <div class="form-inline">
-                <input class="form-control" name="total" type="number" id="total" ng-model="$ctrl.client.total">
+                <input class="form-control" name="total" type="number" id="total" ng-model="$ctrl.client.total" >
           </div>
         </div>
     </div>
  
+    <div class="form-row">
+        <div class="col col-md-12">
+              <label for="deadline">Deadline</label>
+            <div class="form-inline">
+                <input class="form-control" type="date" ng-model="$ctrl.client.deadline" id="example-date-input">
+            </div>
+          </div>
+      </div>
+
         <div class="form-row">
             <div class="col">
                 <button class="btn btn-secondary btn-lg btn-block submit" type="submit">Submit form</button>
@@ -49,3 +65,5 @@
 
     </div>
 </section> -->
+
+<!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem cumque, fugit doloremque architecto, sapiente, dolorem eaque dolore totam quasi mollitia delectus saepe voluptate ut harum optio cupiditate fuga atque aut? -->

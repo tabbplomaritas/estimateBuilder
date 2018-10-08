@@ -1,9 +1,9 @@
 "use strict";
-console.log("service is a go");
 
 function EstimateService($http){
 
 let clients;
+let selectedClient;
 
 const addClient = (client) => {
 
@@ -15,7 +15,6 @@ const addClient = (client) => {
 }
 
 const setClients = () => {
-  console.log("set clients in service");
   
     return $http({
     method: "GET",
@@ -33,10 +32,22 @@ const getClients = () => {
   return clients;
 }
 
+const setSelectedClient = (clickedClient) => {
+  selectedClient = clickedClient;
+  console.log(selectedClient);
+  return selectedClient;
+}
+
+const getSelectedClient = () => {
+  return selectedClient;
+}
+
   return {
     addClient,
     setClients,
-    getClients
+    getClients, 
+    setSelectedClient,
+    getSelectedClient
   };
 }
 

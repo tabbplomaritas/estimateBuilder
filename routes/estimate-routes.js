@@ -31,17 +31,10 @@ estimateRouter.post("/test", (req, res) => {
 });
 
 
-// estimateRouter.post("/clients", (req, res) => {
-//   pool.query("INSERT INTO clients (name) VALUES ($1::text)", [req.body.name]).then(() => {
-//     console.log(response.rows);
-//     res.send(response.rows);
-//   });
-// });
-
 estimateRouter.post("/clients", (req, res) => {
   console.log(req.body);
   
-  pool.query("INSERT INTO clients (name, total, products) VALUES ($1::text, $2::int, $3::text)", [req.body.name, req.body.total, req.body.products]).then(() => {
+  pool.query("INSERT INTO clients (name, summary, products, total, deadline) VALUES ($1::text, $2::text, $3::text, $4::int, $5::text)", [req.body.name, req.body.summary, req.body.products, req.body.total, req.body.deadline]).then(() => {
     pool.query("SELECT * FROM clients ORDER BY id").then((response)=>{
     console.log(response.rows);
     res.send(response.rows);
@@ -64,3 +57,4 @@ estimateRouter.post("/clients", (req, res) => {
 
 
 module.exports = estimateRouter;
+

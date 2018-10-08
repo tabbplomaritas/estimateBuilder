@@ -1,5 +1,5 @@
 "use strict";
-console.log("admin-home comp loading");
+
 
 const adminHome = {
 
@@ -13,8 +13,6 @@ const adminHome = {
  
 
   vm.setClients = () => {
-    console.log("set clients in comp");
-    
    EstimateService.setClients().then((response) => {
       vm.allClients = response;
         console.log(vm.allClients);
@@ -22,12 +20,6 @@ const adminHome = {
   }
 
 
-  // EstimateService.setClients().then(() => {
-  //   EstimateService.getClients().then((response) => {
-  //     console.log(response);
-      
-  //   })
-  // })
 
   vm.setClients();
 
